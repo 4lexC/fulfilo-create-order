@@ -13,7 +13,7 @@ This function allows you to send an order to the Fulfilo API using a Supabase Ed
 - `shipping_postcode` (required, string)
 - `shipping_address` (required, string, max 255 chars)
 - `shipping_city` (required, string, max 255 chars)
-- `shipping_country` (required, string, max 255 chars)
+- `shipping_county` (required, string, max 255 chars)
 - `shipping_country` (required, string)
 
 - `billing_company_name` (optional, string)
@@ -23,10 +23,10 @@ This function allows you to send an order to the Fulfilo API using a Supabase Ed
 - `billing_postcode` (required, string)
 - `billing_address` (required, string, max 255 chars)
 - `billing_city` (required, string, max 255 chars)
-- `billing_country` (required, string, max 255 chars)
+- `billing_county` (required, string, max 255 chars)
 - `billing_country` (required, string)
 
-- `payment_method` (required, string): `"cash"` or `"cod"`
+- `payment_method` (required, string): `"card"` or `"cod"`
 
 - `customer_notes` (optional, string, max 255 chars)
 - `order_shop_id` (optional, string, max 255 chars)
