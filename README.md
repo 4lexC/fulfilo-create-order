@@ -47,6 +47,7 @@ This function allows you to send an order to the Fulfilo API using a Supabase Ed
 
 
 ### Example raw JSON body:
+```json
 {
     "customer_cui": null,
     "customer_email": null,
