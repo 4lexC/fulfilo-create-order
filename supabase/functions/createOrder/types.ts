@@ -15,7 +15,7 @@ export interface Order {
     shipping_postcode: string;          // required
     shipping_address: string;           // required, <= 255 chars
     shipping_city: string;              // required, <= 255 chars
-    shipping_country: string;           // required, <= 255 chars
+    shipping_county: string;           // required, <= 255 chars
     shipping_country: string;           // required
 
     billing_company_name?: string | null;
@@ -25,10 +25,10 @@ export interface Order {
     billing_postcode: string;       // required
     billing_address: string;        // required, <= 255 chars
     billing_city: string;           // required, <= 255 chars
-    billing_country: string;        // required, <= 255 chars
+    billing_county: string;        // required, <= 255 chars
     billing_country: string;        // required
     
-    payment_method: "cash" | "cod";        // required
+    payment_method: "card" | "cod";        // required
 
     customer_notes?: string | null;         // optional, <= 255 chars
     order_shop_id?: string | null;          // optional, <= 255 chars

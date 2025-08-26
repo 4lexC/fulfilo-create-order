@@ -49,38 +49,46 @@ This function allows you to send an order to the Fulfilo API using a Supabase Ed
 ### Example raw JSON body:
 ```json
 {
-    "customer_cui": null,
-    "customer_email": null,
-    "shipping_company_name": "Transport Co. SRL",
-
-    "shipping_first_name": "John",
-    "shipping_last_name": "Doe",
-    "shipping_phone": "+40712345678",
-    "shipping_postcode": "010101",
-    "shipping_address": "Str. Exemplu 12",
-    "shipping_city": "Bucharest",
-    "shipping_country": "Romania",
-    "shipping_country": "Romania",
-
-    "billing_company_name": "Client Co. SRL",
-    "billing_first_name": "John",
-    "billing_last_name": "Doe",
-    "billing_phone": "+40712345678",
-    "billing_postcode": "010101",
-    "billing_address": "Str. Exemplu 12",
-    "billing_city": "Bucharest",
-    "billing_country": "Romania",
-    "billing_country": "Romania",
-
-    "payment_method": "cod",
-    "customer_notes": "Please deliver in the morning",
-
-    "shop_id": "55b6a63b-d667-4fb4-9b26-a0a2920e1cc8",
-    "products": [
-        {
-        "id": "5453ebe7-cd3a-4866-a063-8d63944e5134",
-        "quantity": 2,
-        "price": 50.00
-        }
-    ]
+  "customer_cui": null,
+  "customer_email": null,
+  
+  "shipping_company_name": "Transport Co. SRL",
+  "shipping_first_name": "John",
+  "shipping_last_name": "Doe",
+  "shipping_phone": "+40712345678",
+  "shipping_postcode": "010101",
+  "shipping_address": "Strada Exemplu 1",
+  "shipping_city": "Bucharest",
+  "shipping_county": "Bucharest",
+  "shipping_country": "RO",
+  
+  "billing_company_name": "Transport Co. SRL",
+  "billing_first_name": "John",
+  "billing_last_name": "Doe",
+  "billing_phone": "+40712345678",
+  "billing_postcode": "010101",
+  "billing_address": "Strada Exemplu 1",
+  "billing_city": "Bucharest",
+  "billing_county": "Bucharest",
+  "billing_country": "RO",
+  
+  "payment_method": "card",
+  "customer_notes": "Please deliver in the morning",
+  "order_shop_id": null,
+  "custom_awb": null,
+  "custom_awb_number": null,
+  "shipping_cost": 10.50,
+  "discount_cost": 2.00,
+  "total": 28.50,
+  "currency": "RON",
+  "courier_id": null,
+  "shop_id": "55b6a63b-d667-4fb4-9b26-a0a2920e1cc8",
+  
+  "products": [
+    {
+      "id": "5453ebe7-cd3a-4866-a063-8d63944e5134",
+      "quantity": 2,
+      "price": 10.00
+    }
+  ]
 }
