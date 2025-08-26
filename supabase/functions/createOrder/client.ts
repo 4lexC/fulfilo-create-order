@@ -1,3 +1,5 @@
+import { Order } from './types.ts';
+
 export class FulfiloClient {
     private apiKey: string;
     private apiURL: string;
@@ -7,7 +9,7 @@ export class FulfiloClient {
         this.apiURL = apiURL;
     }
 
-    async createOrder(orderData: Record<string, any>) {
+    async createOrder(orderData: Order) {
         const response = await fetch(this.apiURL, {
             method: 'POST',
             headers: {

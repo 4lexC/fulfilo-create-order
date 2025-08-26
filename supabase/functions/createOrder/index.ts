@@ -6,7 +6,8 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts"
 
 import { FulfiloClient } from './client.ts';
-
+import { Order } from './types.ts';
+ 
 const client = new FulfiloClient(Deno.env.get("FULFILO_API_KEY")!);
 
 Deno.serve(async (req) => {
@@ -15,7 +16,7 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const orderData = await req.json();
+    const orderData: Order = await req.json();
     const result = await client.createOrder(orderData);
 
     return new Response(JSON.stringify(result), {
